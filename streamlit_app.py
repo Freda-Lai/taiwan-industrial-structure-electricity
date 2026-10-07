@@ -8,17 +8,37 @@ import os
 
 from dotenv import load_dotenv
 
+from matplotlib import font_manager
+
 load_dotenv()
 
 # Matplotlib 中文字型設定
-plt.rcParams["font.family"] = "sans-serif"
-plt.rcParams["font.sans-serif"] = [
-    "Noto Sans CJK TC",
-    "Microsoft JhengHei",
-    "Microsoft YaHei",
-    "SimHei",
-    "Arial Unicode MS"
+# 自動尋找系統中的 Noto CJK 字型
+font_paths = font_manager.findSystemFonts()
+
+noto_fonts = [
+    path
+    for path in font_paths
+    if "NotoSansCJK" in os.path.basename(path)
 ]
+
+if noto_fonts:
+    noto_font = font_manager.FontProperties(
+        fname=noto_fonts[0]
+    ).get_name()
+
+    plt.rcParams["font.family"] = noto_font
+
+else:
+    # Windows 本機沒有 Noto CJK 時，使用 Windows 中文字型
+    plt.rcParams["font.family"] = "sans-serif"
+    plt.rcParams["font.sans-serif"] = [
+        "Microsoft JhengHei",
+        "Microsoft YaHei",
+        "SimHei",
+        "Arial Unicode MS"
+    ]
+
 plt.rcParams["axes.unicode_minus"] = False
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
