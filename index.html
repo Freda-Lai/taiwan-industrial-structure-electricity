@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臺灣產業結構變遷與電力消費趨勢分析</title>
+
+```
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family:
+            "Noto Sans TC",
+            "Microsoft JhengHei",
+            Arial,
+            sans-serif;
+        background: linear-gradient(135deg, #eef4ff 0%, #f8fbff 100%);
+        color: #1f2937;
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 70px 24px;
+    }
+
+    .hero {
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
+    .icon {
+        font-size: 58px;
+        margin-bottom: 18px;
+    }
+
+    h1 {
+        font-size: 38px;
+        line-height: 1.35;
+        color: #17365d;
+        margin-bottom: 14px;
+    }
+
+    .english-title {
+        font-size: 19px;
+        color: #64748b;
+        margin-bottom: 25px;
+    }
+
+    .description {
+        max-width: 760px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #475569;
+    }
+
+    .highlight {
+        font-weight: 700;
+        color: #2563eb;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 45px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 18px;
+        padding: 34px 26px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+        border: 1px solid #e2e8f0;
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.13);
+    }
+
+    .card-icon {
+        font-size: 42px;
+        margin-bottom: 18px;
+    }
+
+    .card h2 {
+        font-size: 21px;
+        color: #17365d;
+        margin-bottom: 12px;
+    }
+
+    .card p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #64748b;
+        min-height: 72px;
+        margin-bottom: 22px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 11px 22px;
+        border-radius: 10px;
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        transition: background 0.2s ease;
+    }
+
+    .button:hover {
+        background: #1d4ed8;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 60px;
+        padding-top: 25px;
+        border-top: 1px solid #dbe4f0;
+        color: #94a3b8;
+        font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+        h1 {
+            font-size: 30px;
+        }
+
+        .cards {
+            grid-template-columns: 1fr;
+        }
+
+        .container {
+            padding: 50px 20px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="container">
+
+    <section class="hero">
+
+        <div class="icon">📊</div>
+
+        <h1>
+            臺灣產業結構變遷與電力消費趨勢分析
+        </h1>
+
+        <div class="english-title">
+            Taiwan Industrial Structure and Electricity Consumption Trend Analysis
+        </div>
+
+        <p class="description">
+            以
+            <span class="highlight">電力消費</span> ×
+            <span class="highlight">產業生產</span> ×
+            <span class="highlight">產業結構</span> ×
+            <span class="highlight">氣象</span> ×
+            <span class="highlight">AI 發展</span>
+            探索臺灣產業與用電趨勢。
+        </p>
+
+    </section>
+
+
+    <section class="cards">
+
+        <!-- README -->
+
+        <div class="card">
+
+            <div class="card-icon">📖</div>
+
+            <h2>閱讀研究</h2>
+
+            <p>
+                了解研究背景、研究問題、資料來源、
+                Power BI 分析、模型驗證與主要研究發現。
+            </p>
+
+            <a
+                class="button"
+                href="README.md"
+                target="_blank"
+            >
+                閱讀 README
+            </a>
+
+        </div>
+
+
+        <!-- Streamlit -->
+
+        <div class="card">
+
+            <div class="card-icon">🚀</div>
+
+            <h2>互動式分析</h2>
+
+            <p>
+                進入 Streamlit 五頁互動式成果，
+                探索 Power BI、產業分析、模型驗證與 2026 年預測。
+            </p>
+
+            <a
+                class="button"
+                href="#"
+                target="_blank"
+                id="streamlit-link"
+            >
+                開啟 Streamlit
+            </a>
+
+        </div>
+
+
+        <!-- GitHub -->
+
+        <div class="card">
+
+            <div class="card-icon">💻</div>
+
+            <h2>查看專案</h2>
+
+            <p>
+                查看完整專案程式、資料檔案、
+                requirements 與版本管理內容。
+            </p>
+
+            <a
+                class="button"
+                href="https://github.com/Freda-Lai/taiwan-industrial-structure-electricity"
+                target="_blank"
+            >
+                查看 GitHub
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+
+        臺灣產業結構變遷與電力消費趨勢分析
+        <br>
+        Data Analysis Project · Python · Power BI · Streamlit
+
+    </footer>
+
+</div>
+```
+
+</body>
+</html>
