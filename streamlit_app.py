@@ -1,10 +1,25 @@
 import streamlit as st
+
 import pandas as pd
+
 import matplotlib.pyplot as plt
+
 import os
+
 from dotenv import load_dotenv
 
 load_dotenv()
+
+# Matplotlib 中文字型設定
+plt.rcParams["font.family"] = "sans-serif"
+plt.rcParams["font.sans-serif"] = [
+    "Noto Sans CJK TC",
+    "Microsoft JhengHei",
+    "Microsoft YaHei",
+    "SimHei",
+    "Arial Unicode MS"
+]
+plt.rcParams["axes.unicode_minus"] = False
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
